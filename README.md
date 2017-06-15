@@ -1,14 +1,12 @@
-##Stream One Project
+Stream One Project
 
  
 ### Aim?
  
-This is a Todo app. It helps users to keep track of any things that they have todo.
+For the purpose of the project, I decided to create a website for my own company, namely Code Klan LTD. Although I already have a website, the existing one is CMS based and therefore I would like to take this opportunity and create one from scratch.
  
-### What does it do?
+### Functionalities?
  
-This app will allow users to register and login. Once the users have done that, they'll be able to create items to add to their todo list. Once they've created their todo list, they'll be able to update the status of each item and even delete items!
+This website will allow visitors to find out about the services provided by Code Klan, contact the company, and sign up for news letters.
  
-### How does it work
- 
-This app uses JSON Web Tokens to authenticate users and keep them logged in. All the data is consumed from an API hosted on Heroku using AngularJS. The site is styled with Bootstrap.
+### Testing:
