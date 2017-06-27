@@ -325,7 +325,11 @@ input {
 }
 
 
-
+#successMessage {
+    
+    color: green;
+    display: none;
+}
 
 
 
