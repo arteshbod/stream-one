@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Code Player</title>
+
+    
+    
+    <!-- jQuery -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+    
+
+<style type="text/css">
+    
+    body {
+        
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+        
+    }
+    
+    #header {
+        
+        width: 100%;
+        background-color: #EEEEEE;
+        padding: 5px;
+        height: 30px;
+    }
+    
+    #logo {
+        
+        float: left;
+        font-weight: bold;
+        font-size: 120%;
+        padding: 3px 5px;
+    }
+    
+    #backButton {
+        
+        float: right;
+        font-weight: bold;
+        font-size: 90%;
+        padding: 5px 10px;
+        
+    }
+    
+    #buttonContainer {
+        
+        width: 110px;
+        margin: 0 auto;
+    }
+    
+    .toggleButton {
+        
+        float: left;
+        border: 1px solid grey;
+        padding: 6px;
+        border-right: none;
+        font-size: 90%
+        
+    }
+    
+    #html {
+        
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+    
+    #output {
+        
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-right: 1px solid grey;
+    }
+    
+    textarea {
+        
+        width: 50%;
+        resize: none;
+        border-top: none;
+        border-collapse: grey;
+        border-bottom: none;
+        
+    }
+    
+    .panel {
+        
+        float: left;
+        widows: 50%;
+    }
+    
+    iframe {
+        
+        border: none;
+    }
+    
+
+</style>
+</head>
+
+<body>
+
+<div id="header">
+    
+    <div id="logo">
+        
+    CodePlayer
+        
+    </div>
+    
+    <div id="buttonContainer">
+    
+    <div class="toggleButton" id="html">HTML</div>
+    <div class="toggleButton" id="output">Output</div>
+    
+    </div>
+    
+    <div id="backButton">
+    
+        <a href="index.html">Back to codeklan.com</a>
+    
+    </div>
+    
+    
+    </div>
+
+<div id="bodyContainer">
+    
+    <textarea id="htmlPanel" class="panel">Hello World!</textarea>
+    
+    <iframe id="outputPanel" class="panel"></iframe>
+    
+    </div>
+
+<script type="text/javascript">
+    
+    $(".toggleButton").hover(function() {
+       
+        $(this).css("background-color", "grey")
+        
+    }, function() {
+        
+        $(this).css("background-color", "#EEEEEE")
+        
+    });
+    
+    $(".panel").height($(window).height() - $("#header").height() - 15);
+    
+    $(".panel").width(($(window).width() / 2) - 3);
+    
+    $("iframe").contents().find("html").html($("#htmlPanel").val());
+    
+    $("textarea").on('change keyup paste', function() {
+        
+       $("iframe").contents().find("html").html($("#htmlPanel").val());
+        
+    });
+    
+    </script>
+
+
+
+
+
+		
+
+				
+				
+
+				
+
+
+			</body>
+
+			</html>
